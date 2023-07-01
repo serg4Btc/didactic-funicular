@@ -1,0 +1,12 @@
+def check_io(word):
+    vowels = "aeiou"
+    for i in range(len(word)-2):
+        if word[i] in vowels and word[i+1] == "o" and word[i+2] in vowels:
+            return True
+    return False
+
+word = input("Enter a word: ")
+if check_io(word):
+    print("The word satisfies the 'iO' condition.")
+else:
+    print("The word does not satisfy the 'iO' condition.")
